@@ -1,0 +1,13 @@
+# 绝不提交: 含NVR密码的配置
+nvrclip.toml
+*.toml.bak
+
+# 二进制与临时产物
+*.exe
+*.src
+run.log
+work/
+days/
+clips/
+batch_export/
+nvrclip_temp/

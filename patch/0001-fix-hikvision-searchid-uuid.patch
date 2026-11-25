@@ -1,0 +1,13 @@
+diff --git a/internal/hikvision/client.go b/internal/hikvision/client.go
+index 876999c..c8c904a 100644
+--- a/internal/hikvision/client.go
++++ b/internal/hikvision/client.go
+@@ -210,7 +210,7 @@ func (c *Client) downloadBase(ctx context.Context, baseURL string, req nvr.Downl
+ }
+ 
+ func searchRequest(channel int, from time.Time, to time.Time) string {
+-	id := fmt.Sprintf("{%08x-0000-0000-0000-000000000000}", time.Now().UnixNano())
++	id := fmt.Sprintf("{%08x-0000-0000-0000-000000000000}", uint32(time.Now().UnixNano()))
+ 	return fmt.Sprintf(`<?xml version="1.0" encoding="UTF-8"?>
+ <CMSearchDescription>
+   <searchID>%s</searchID>
